@@ -1,0 +1,82 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.circle{ 
+    background-color:yellow;
+    height:100px;
+    width:100px;
+    margin:12px;
+    border-radius: 50%;
+    color: white;
+    transition: background-color .5s, width .5s, height .5s;
+}
+/*fizz multiples of 3*/
+    .circle:nth-child(3n){
+        background-color: blue;
+    }
+
+    .circle:nth-child(3n)::before{
+        content: 'FIZZ';
+        position: relative;
+        top: 47px;
+        left: 38px;
+    }
+        
+    .circle:nth-child(3n):hover::before{
+        top: 62px;
+        left: 48px;
+        
+    }
+  /*buzz multiples of 5*/ 
+    .circle:nth-child(5n) {
+        background-color: green;
+    }
+    .circle:nth-child(5n)::before{
+            content: 'BUZZ';
+            position: relative;
+            top: 42px;
+            left: 29px;
+    }
+
+    .circle:nth-child(5n)::before{
+        top: 47px;
+        left: 34px;
+    }
+    .circle:nth-child(15n){
+        background-color: red;
+    }
+    .circle:nth-child(15n)::before{
+        content: 'FIZZBUZZ';
+        position: relative;
+        top: 42px;
+        left: 33px;
+    }
+    .circle:nth-child(15n)::before{
+        top: 20px;
+        left: 12px;
+    }
+
+    
+    .circle:hover{
+        background-color: purple;;
+        -webkit-box-shadow: 2px 17px 33px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 17px 33px 3px rgba(0,0,0,0.75);
+box-shadow: 2px 17px 33px 3px rgba(0,0,0,0.75);
+width:105px; 
+height:105px;
+margin:7px;
+transition: background-color .5s, width .5s, height .5s;
+    }
+        @media only screen and (max-width: 526px){
+            .circle{
+                height:120px;
+                width:120px;
+                font-size:24px;
+                min-width:150px;
+            }
+    
+            .circle::before{
+                
+            }
